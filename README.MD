@@ -1,0 +1,1 @@
+Phoca Download Statistics Module is Joomla! CMS extension. Module which displays statistics of downloaded files in Phoca Download.
