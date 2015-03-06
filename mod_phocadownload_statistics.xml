@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<install type="module" group="" version="1.5.0">
+	<name>Phoca Download Statistics Module</name>
+	<creationDate>12/05/2010</creationDate>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>1.3.5</version>
+	<!-- The description is optional and defaults to the name -->
+	<description><![CDATA[ 
+       Phoca Download Statistics Menu Module - displays statistics of downloaded files<br />
+       More information on <a href="http://www.phoca.cz" target="_blank" >www.phoca.cz</a>  
+      ]]></description>
+
+	<!-- Main File Copy Section -->
+	<files>
+		<filename module="mod_phocadownload_statistics">index.html</filename>
+		<filename module="mod_phocadownload_statistics">mod_phocadownload_statistics.php</filename>
+		<filename module="mod_phocadownload_statistics">mod_phocadownload_statistics.xml</filename>
+		<filename module="mod_phocadownload_statistics">assets/index.html</filename>
+		<filename module="mod_phocadownload_statistics">elements/index.html</filename>
+		<filename module="mod_phocadownload_statistics">elements/phocadownloadsmod.php</filename>
+		<filename module="mod_phocadownload_statistics">elements/phocaheadmod.php</filename>
+		<filename module="mod_phocadownload_statistics">tmpl/default.php</filename>
+		<filename module="mod_phocadownload_statistics">tmpl/index.html</filename>
+	</files>
+
+	<!-- Language -->
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_phocadownload_statistics.ini</language>
+	</languages>
+
+	<!-- Only Development - copy ./front, ./language, ./other to admin area -->
+	<files>
+		<filename>language/en-GB/en-GB.mod_phocadownload_statistics.ini</filename>
+		<filename>other/install_xml.php</filename>
+	</files>
+	
+	<params addpath="/modules/mod_phocadownload_statistics/elements">
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	
+		<param name="display_title" type="list" default="1" label="Display Title" description="Display Title DESC">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+		</param>
+		
+		<param name="display_filename" type="list" default="1" label="Display Filename" description="Display Filename DESC">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+		</param>
+		
+		<param name="display_cat_sec" type="list" default="1" label="Display Category/Section" description="Display Category/Section DESC">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+		</param>
+		
+		<param name="display_downloads" type="list" default="1" label="Display Downloads" description="Display Downloads DESC">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+		</param>
+		
+		<param name="module_width" default="400" size="10" type="text" label="Module Width" description="Module Width DESC" />
+		<param name="font_size" default="10" size="10" type="text" label="Font Size" description="Font Size DESC" />
+		<param name="number_item" default="5" size="10" type="text" label="Number of Items" description="Number of Items DESC" />
+		<param name="section_id" default="0" size="5" type="phocadownloadsmod" multiple="true" label="Section ID" description="Section ID DESC" />
+	
+	</params>
+
+</install>
